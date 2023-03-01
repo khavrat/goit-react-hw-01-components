@@ -1,5 +1,16 @@
 import PropTypes from 'prop-types';
 import user from 'user.json';
+import {
+  ProfileCard,
+  DescriptionWrapper,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+  Stats,
+  StatsItem,
+  Label, Quantity,
+} from '../Profile/Profile.styled';
 
 
 export const Profile = () => {
@@ -11,29 +22,29 @@ export const Profile = () => {
     stats: { followers, views, likes },
   } = user;
   return (
-    <div>
-      <div>
-        <img src={avatar} alt="User avatar"/>
-        <p>{username}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
-      </div>
+    <ProfileCard>
+      <DescriptionWrapper>
+        <Avatar src={avatar} alt="User avatar" width="100px" height="100px"/>
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </DescriptionWrapper>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
-        </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
-        </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Stats>
+        <StatsItem>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
+        </StatsItem>
+      </Stats>
+    </ProfileCard>
   );
 };
 
