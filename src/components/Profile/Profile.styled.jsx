@@ -20,8 +20,6 @@ export const Avatar = styled.img`
   display: block;
   alighn-items: center;
   border-radius: 50%;
-  background-size: contain;
-  owerflow: hidden;
   outline: 1px solid rgba(80, 80, 80, 0.3); 
 `;
 
