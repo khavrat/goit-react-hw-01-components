@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import user from 'user.json';
 import {
   ProfileCard,
   DescriptionWrapper,
@@ -13,7 +12,7 @@ import {
 } from 'components/Profile/Profile.styled';
 
 
-export const Profile = () => {
+export const Profile = (user) => {
   const {
     username,
     tag,
@@ -21,6 +20,7 @@ export const Profile = () => {
     avatar,
     stats: { followers, views, likes },
   } = user;
+  // console.log('user', user);
   return (
     <ProfileCard>
       <DescriptionWrapper>

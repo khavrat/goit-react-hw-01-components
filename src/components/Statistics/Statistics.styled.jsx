@@ -4,7 +4,7 @@ import { randomColor } from '../../utils/randomColor';
 
 
 export const StatisticCard = styled.section`
-  margin: 0 auto;
+  margin: 40px auto;
   padding-top: 20px;
   width: 400px;
   border-radius: 4px;
@@ -22,8 +22,9 @@ font-weight: 700;
 
 export const StatisticList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
-  owerflow: hidden;
   margin: 20px 0 0 0;
 `;
 
@@ -31,14 +32,12 @@ export const StatisticItem = styled.li`
   display: inline-block;
   list-style: none;
   margin: 0;
-  padding: 5px;
+  padding: 5px 0 5px 0;
   width: calc(100% / 5);
   display: flex;
   align-items: center;
-  flex-content: center;
   flex-direction: column;
   background-color: ${randomColor};
-
 `;
 
 export const Label = styled.span`

@@ -9,7 +9,6 @@ import {
 
 export const Statistics = ({ title, stats }) => {
   console.log(title);
-  console.log(' data in Statistic', stats);
   return (
     <StatisticCard>
       {title && <StatisticTitle>{title}</StatisticTitle>}
@@ -25,16 +24,17 @@ export const Statistics = ({ title, stats }) => {
     </StatisticCard>
   );
 };
+  console.log(' data out Statistic', StatisticItem);
 
 
 Statistics.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string,
-      label: PropTypes.string,
-      percentage: PropTypes.number,
-    })
-  ),
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }).isRequired
+  ).isRequired,
 };
 
