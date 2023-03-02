@@ -8,7 +8,7 @@ import {
 } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
-  console.log(title);
+  // console.log(title);
   return (
     <StatisticCard>
       {title && <StatisticTitle>{title}</StatisticTitle>}
@@ -24,7 +24,6 @@ export const Statistics = ({ title, stats }) => {
     </StatisticCard>
   );
 };
-  console.log(' data out Statistic', StatisticItem);
 
 
 Statistics.propTypes = {

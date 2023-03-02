@@ -57,7 +57,7 @@ export const StatsItem = styled.li`
   align-items: center;
   flex-content: center;
   flex-direction: column;
-  background-color: rgba(80, 80, 80, 0.1);
+  background-color: rgba(222, 218, 237, 1);
   border-top: 1px solid rgba(80, 80, 80, 0.3);
   &:not(:nth-of-type(3n)) {
     border-right: 1px solid rgba(80, 80, 80, 0.3);
