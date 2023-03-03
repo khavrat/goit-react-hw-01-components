@@ -7,7 +7,7 @@ import {
 } from '../TransactionHistory/TransactionHistory.styled';
 
 export const TransactionHistory = ({items}) => {
-    console.log('items', items);
+    // console.log('items', items);
   return (
     <Table>
       <TableHead>
